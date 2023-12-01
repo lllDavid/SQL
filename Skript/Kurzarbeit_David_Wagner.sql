@@ -1,4 +1,4 @@
--- Klausur SQL David Wagner Info2 01.12.23
+-- Kurzarbeit SQL David Wagner Info2 01.12.23
 
 -- Aufgabe 1
 
