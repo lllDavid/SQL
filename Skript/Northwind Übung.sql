@@ -42,11 +42,15 @@ SELECT Count(customer_id) FROM orders;
 Update customers set job_title ="NotOwner" where job_title ='Owner' ;
 Select * from customers;
 
-Select count(last_name) From customers where last_name = 'Xie';
 
-create view test as select last_name from customers;
-select * from test;
+create view aufgabe2 as select id,customer_id,shipped_date,ship_city  from orders;
+select * from aufgabe2;
 
+
+select * from aufgabe2 order by id desc;
+
+
+select ship_city from orders where ship_city="Los Angeles" or "New York";
 
 
 
