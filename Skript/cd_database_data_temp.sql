@@ -6,6 +6,8 @@
 -- by Matthias Obermaier, 2021, using Data found on Wikipedia
 -- ###################################################
 
+USE `cd`;
+
 CREATE TABLE sp_temp_songs (AlbumID INT, Track INT, Song VARCHAR(50));
 INSERT INTO sp_temp_songs VALUES
     (1, 4, 'Hummer'),

@@ -8,10 +8,10 @@
 
 -- Make DB if it doesn't exist
 -- probably gives a warning if it actually does already exist
-CREATE DATABASE IF NOT EXISTS `sqlinfo`;
+CREATE DATABASE IF NOT EXISTS `cd`;
 
 -- Use DB
-USE `sqlinfo`;
+USE `cd`;
 
 -- Drop (Delete) Tables first, in the correct order so that Foreign Key
 -- constraints are resolved (see comments to CREATE TABLEs!)

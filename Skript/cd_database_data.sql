@@ -6,7 +6,7 @@
 -- ###################################################
 
 -- Change to correct database
-USE `sqlinfo`;
+USE `cd`;
 
 -- Due to Foreign Key Constraints (CD_Albums.Interpret_ID --FK-->
 -- CD_Artist.Interpret_ID), CD_Artist has to have an Interpret_ID registered
