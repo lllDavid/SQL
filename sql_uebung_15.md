@@ -15,7 +15,6 @@ Erstelle eine Stored Procedure, die die durchschnittliche Anzahl der Songs pro
 Album angibt (einfach Songs / Alben!)
 
 ## Aufgabe 3
-
 Erstelle eine SP, die angibt, welche Interpreten mehr als ein Album in der
 Datenbank stehen haben
 
