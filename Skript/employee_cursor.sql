@@ -1,7 +1,7 @@
 DELIMITER $$
 
-DROP PROCEDURE IF EXISTS IncreaseLoanAmounts$$
-CREATE PROCEDURE IncreaseLoanAmounts()
+DROP PROCEDURE IF EXISTS IncreaseLoanAmount $$
+CREATE PROCEDURE IncreaseLoanAmount()
 BEGIN
     DECLARE done INT DEFAULT 0;  
     DECLARE employee_id INT;     
@@ -31,7 +31,6 @@ DELIMITER ;
 
 
 
+CALL IncreaseLoanAmount();
 
-call IncreaseLoanAmounts();
 
-select * from employees;
