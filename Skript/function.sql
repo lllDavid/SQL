@@ -1,4 +1,4 @@
--- Kommentar für die Funktion AddNumbers
+-- Funktion AddNumbers
 COMMENT ON FUNCTION AddNumbers(INT, INT) IS 'Funktion zum Addieren von zwei Zahlen';
 
 CREATE FUNCTION AddNumbers(num1 INT, num2 INT)
@@ -11,7 +11,7 @@ END;
 
 
 
--- Kommentar für die Funktion CalculateSquare
+-- Funktion CalculateSquare
 COMMENT ON FUNCTION CalculateSquare(INT) IS 'Funktion zur Berechnung des Quadrats einer Zahl';
 
 CREATE FUNCTION CalculateSquare(input_number INT)
@@ -24,7 +24,7 @@ END;
 
 
 
--- Kommentar für die Funktion CalculateCircleArea
+-- Funktion CalculateCircleArea
 COMMENT ON FUNCTION CalculateCircleArea(DECIMAL(10, 2)) IS 'Funktion zur Berechnung der Fläche eines Kreises';
 
 CREATE FUNCTION CalculateCircleArea(radius DECIMAL(10, 2))
@@ -37,7 +37,7 @@ END;
 
 
 
--- Kommentar für die Funktion IsEven
+-- Funktion IsEven
 COMMENT ON FUNCTION IsEven(INT) IS 'Funktion zur Überprüfung, ob eine Zahl gerade oder ungerade ist';
 
 CREATE FUNCTION IsEven(number INT)
