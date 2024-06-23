@@ -1,45 +1,63 @@
--- Funktion AddNumbers
-COMMENT ON FUNCTION AddNumbers(INT, INT) IS 'Funktion zum Addieren von zwei Zahlen';
+-- Addieren
+DELIMITER $$
 
-CREATE FUNCTION AddNumbers(num1 INT, num2 INT)
+DROP FUNCTION IF EXISTS addNumbers $$
+CREATE FUNCTION addNumbers(num1 INT, num2 INT)
 RETURNS INT
 BEGIN
-    DECLARE result INT;
-    SET result = num1 + num2;
-    RETURN result;
-END;
+    DECLARE ergebnis INT;
+    SET ergebnis = num1 + num2;
+    RETURN ergebnis;
+END$$
+
+DELIMITER ;
+
+select addNumbers(2,2) as Ergebnis;
 
 
 
--- Funktion CalculateSquare
-COMMENT ON FUNCTION CalculateSquare(INT) IS 'Funktion zur Berechnung des Quadrats einer Zahl';
+-- Quadratzahl
+DELIMITER //
 
-CREATE FUNCTION CalculateSquare(input_number INT)
+DROP FUNCTION IF EXISTS calculateSquare //
+
+CREATE FUNCTION calculateSquare(number INT)
 RETURNS INT
 BEGIN
     DECLARE square INT;
-    SET square = input_number * input_number;
+    SET square = number * number;
     RETURN square;
-END;
+END //
+
+DELIMITER ;
+
+SELECT calculateSquare(3) AS Ergebnis;
 
 
 
--- Funktion CalculateCircleArea
-COMMENT ON FUNCTION CalculateCircleArea(DECIMAL(10, 2)) IS 'Funktion zur Berechnung der Fläche eines Kreises';
+-- Kreisfläche
+DELIMITER //
 
+DROP FUNCTION IF EXISTS CalculateCircleArea //
 CREATE FUNCTION CalculateCircleArea(radius DECIMAL(10, 2))
+
 RETURNS DECIMAL(15, 2)
 BEGIN
     DECLARE area DECIMAL(15, 2);
     SET area = PI() * radius * radius;
     RETURN area;
-END;
+END //
+
+DELIMITER ;
+
+SELECT CalculateCircleArea(2.3) as Ergebnis;
 
 
 
--- Funktion IsEven
-COMMENT ON FUNCTION IsEven(INT) IS 'Funktion zur Überprüfung, ob eine Zahl gerade oder ungerade ist';
+-- Gleichheit prüfen
+DELIMITER //
 
+DROP FUNCTION IF EXISTS IsEven //
 CREATE FUNCTION IsEven(number INT)
 RETURNS VARCHAR(10)
 BEGIN
@@ -50,4 +68,8 @@ BEGIN
         SET result = 'Odd';
     END IF;
     RETURN result;
-END;
+END //
+
+DELIMITER ;
+
+SELECT IsEven(3) as Ergebnis ;
