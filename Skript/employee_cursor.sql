@@ -9,7 +9,6 @@ BEGIN
 
  	DECLARE employee_cursor CURSOR FOR SELECT id, loan_amount FROM employees;
 
-   
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
 
     OPEN employee_cursor;
@@ -20,8 +19,7 @@ BEGIN
             LEAVE read_loop;
         END IF;
 		
-        
-        SET employee_loan = employee_loan * 1.10;
+            SET employee_loan = employee_loan * 1.10;
 
         UPDATE employees SET loan_amount = employee_loan WHERE id = employee_id;
     END LOOP;
