@@ -1,4 +1,4 @@
-DELIMITER $$
+CRDELIMITER $$
 
 CREATE TRIGGER prevent_manual_loan_update
 BEFORE UPDATE ON employees
