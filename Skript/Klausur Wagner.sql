@@ -9,8 +9,6 @@
 #b)
 #SELECT * FROM werkzeuge LEFT JOIN herstellerdaten ON werkzeuge.Hersteller  = herstellerdaten.HID;
 
-# Das Kommando lautet LEFT JOIN 
-
 
 
 # Aufgabe2
